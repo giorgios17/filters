@@ -3,7 +3,9 @@ let loadFile = function (event) {
     let file = document.getElementById("file");
     let src = URL.createObjectURL(file.files[0]);
     let form = document.getElementById("form");
+    let filters = document.getElementById("filters");
     form.classList.add("d-none");
+    filters.classList.remove("d-none");
 
     var e = document.createElement('div');
     e.innerHTML = "<img id='imgupload' src='" + src + "'></div>";

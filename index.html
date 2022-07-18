@@ -24,14 +24,15 @@
 
 <body>
     <div class="d-flex justify-content-center mt-3">
-        <form id="form" method="post">
-            <h3>Carica un immagine</h3>
-            <input type="file" id="file" name="file" accept="image/*">
-            <input type="button" name="submit" id="submit" value="Carica" onclick="loadFile(event);">
-        </form>
+        <div class="input-group" id="form">
+            <input type="file" class="form-control" id="file" name="file" aria-describedby="inputGroupFileAddon04"
+                aria-label="Upload" accept="image/*">
+            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04"
+                onclick="loadFile(event);">Carica</button>
+        </div>
     </div>
     <div id="gallery" class="d-flex justify-content-center my-5"></div>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between d-none" id="filters">
         <div class="d-flex flex-column align-items-center">
             <label for="grayscale">Grayscale</label>
             <input type="range" id="grayscale" name="grayscale" min="0" max="10" value="0" onchange="grayscaleFilter()">
